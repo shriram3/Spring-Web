@@ -1,3 +1,6 @@
 # Spring-Web
 
-Initial commit
+
+# Step 1:
+
+- Basic Spring App with JPA .
