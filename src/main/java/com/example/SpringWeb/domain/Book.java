@@ -18,14 +18,17 @@ public class Book {
     @JoinTable(name = "author_id", joinColumns = @JoinColumn(name="book_id"), inverseJoinColumns= @JoinColumn(name = "author_id"))
     private Set<Author> authors = new HashSet<>();
 
+    @ManyToOne
+    private Publisher publisher;
+
     public Book() {
     }
 
     public Book(String name, String isbn){
         this.name = name;
         this.isbn = isbn;
-
     }
+
 
     public long getId() {
         return id;
@@ -57,6 +60,14 @@ public class Book {
 
     public void setAuthors(Set<Author> authors) {
         this.authors = authors;
+    }
+
+    public Publisher getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(Publisher publisher) {
+        this.publisher = publisher;
     }
 
     @Override
