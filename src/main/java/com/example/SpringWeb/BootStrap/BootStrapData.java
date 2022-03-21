@@ -26,6 +26,8 @@ public class BootStrapData implements CommandLineRunner {
         Publisher eagle = new Publisher("Eagle","Opp. of VOC","Tvl", 989794556);
         Publisher pvt = new Publisher("pvt","Opp. of BT","Tvl", 989954587);
 
+        publisherRepo.save(eagle);
+        publisherRepo.save(pvt);
 
         Author ram = new Author("ram");
         Author shri = new Author("Shri");
